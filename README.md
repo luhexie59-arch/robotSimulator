@@ -24,7 +24,7 @@ A Python-based robotic pathfinding simulator built with **Pygame**, featuring **
 ---
 
 ### How to Run
-1. **Clone this repository:**
+1. **Clone this repository**
 2. **Install dependencies**
 ```bash
 pip install pygame numpy
@@ -37,14 +37,15 @@ pip install pygame numpy
 - Sometimes the robot may crash into mobile obstacles at turning points
 
 ### Future Improvements
-- Use advanced searching algorithms, such as probabilistic pathfinding (e.g., RRT*)
+- Use advanced algorithms, such as probabilistic pathfinding (e.g., RRT*)
+- Update dynamic obstacle detecting algorithm
 - Add curvatures at turnings
 - Enable dynamic speed control
 - Refactor some parts of the code to improve computation efficiency
 - Bug fixes
 ---
 ### Example Screenshots
-#### v2
+#### v2 (using map 5)
 ![v2example](https://raw.githubusercontent.com/luhexie59-arch/robotSimulator/refs/heads/main/assets/g2_4.png)
-#### v3
+#### v3 (using map 6)
 ![v3example](https://raw.githubusercontent.com/luhexie59-arch/robotSimulator/refs/heads/main/assets/g1_3.png)
