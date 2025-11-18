@@ -12,8 +12,6 @@ though their actual behaviorial differences are still unclear in this project.
 from nearWallCost import nearWallCostFunctions
 SCREENSIZE = (400, 300)
 MAP = 5
-# Recommended rngs for map 5: 13, 8888
-# Recommended rngs for map 6: 1111, 32
 rng = np.random.default_rng(8888)
 
 class mobileRobot:
@@ -205,10 +203,8 @@ class randomObstacle:
         points = rotation @ points + np.array(startPoint).reshape((2, 1))
         points = points.T.astype(np.int64)
         # Check if any points exceeds the range of the screen
-        points[:, 0] = np.where(points[:, 0] < 0, 0, points[:, 0])
-        points[:, 0] = np.where(points[:, 0] > SCREENSIZE[0], SCREENSIZE[0], points[:, 0])
-        points[:, 1] = np.where(points[:, 1] < 0, 0, points[:, 1])
-        points[:, 1] = np.where(points[:, 1] > SCREENSIZE[1], SCREENSIZE[1], points[:, 1])
+        points[:, 0] = np.clip(points[:, 0], 0, SCREENSIZE[0])
+        points[:, 1] = np.clip(points[:, 1], 0, SCREENSIZE[1])
         self.randList = points
         print("Initial positions of random obstacles", self.randList.tolist())
 
