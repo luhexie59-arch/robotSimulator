@@ -50,8 +50,3 @@ pip install pygame numpy
 #### v3 (using map 6)
 ![v3example](https://raw.githubusercontent.com/luhexie59-arch/robotSimulator/refs/heads/main/assets/g1_3.png)
 
----
-### Author
-A high school student interested in mathematics, algorithms, and AI.
-
-**Given the constraints of my individual expertise, some parts of the project might not be perfect. I sincerely appreciate any constructive feedback from the community to help enhance it.**
