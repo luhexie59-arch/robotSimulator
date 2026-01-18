@@ -1,5 +1,5 @@
 '''
-Please note that these functions are experimental only at present.
+These functions are experimental only at present.
 '''
 
 import numpy as np
@@ -32,4 +32,5 @@ def InverseDistanceCost(x, y, map, sensitive_radius):
     surround = map[x0:x1, y0:y1]
     dist_matrix = np.indices(surround.shape)
     dist_matrix = np.sqrt(np.sum(dist_matrix**2, axis=0))
+
     return np.sum(surround / (dist_matrix + 1))
